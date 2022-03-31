@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import data from './components/data'
 import './App.css';
 import Header from './components/Header/Header';
@@ -9,6 +9,7 @@ import Yan from './components/Yandan/Yan';
 function App() {
 
   const { productItem }  = data;
+  const [cartItem,setCartItem] =useState([])
 
   return (
     <div className="App">
@@ -18,7 +19,10 @@ function App() {
 
 
       <Header />
-      <Yan productItem={productItem}/>
+      <Yan 
+      productItem={productItem}
+      cartItem={cartItem}
+      />
       </Router>
     
 
