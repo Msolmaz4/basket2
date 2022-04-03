@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Header = () => {
+const Header = ({cartItem}) => {
   return (
     <header className="header">
       <div>
@@ -29,6 +29,9 @@ const Header = () => {
               <li>
                   <Link to='/Cart' className="cart">
                   <i class="fas fa-shopping-cart"></i>
+                  <span>
+                    {cartItem.length === 0 ? '' : cartItem.length}
+                  </span>
 
                   </Link>
               </li>

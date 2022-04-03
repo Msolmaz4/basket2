@@ -1,7 +1,7 @@
 import React from 'react'
 import './Products.css'
 
-const Products = ({productItem}) => {
+const Products = ({productItem,handleAdd}) => {
   return (
     <div className='products'>
         {
@@ -17,7 +17,7 @@ const Products = ({productItem}) => {
                     </div>
                     <div className='product-price'> {item.price}</div>
 
-                <button className='product-add-button'>Add</button>
+                <button className='product-add-button' onClick={()=>handleAdd(item)}>Add</button>
                 </div>
             ))
         }
